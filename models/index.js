@@ -1,27 +1,24 @@
 // models/index.js
 
-// Importando o Sequelize e o DataTypes do pacote 'sequelize'
 const { Sequelize, DataTypes } = require('sequelize');
-
-// Importando o módulo 'path' do Node.js para lidar com caminhos de arquivo
 const path = require('path');
 
 // Configuração do Sequelize para usar SQLite como banco de dados
 const sequelize = new Sequelize({
-  dialect: 'sqlite', // Utilizando o SQLite como dialect (tipo de banco de dados)
-  storage: path.join(__dirname, 'database.sqlite') // Caminho para o arquivo do banco de dados (localizado na mesma pasta deste script)
+  dialect: 'sqlite',
+  storage: path.join(__dirname, 'database.sqlite')
 });
 
 // Definição do modelo de Usuário ('User') com Sequelize
 const User = sequelize.define('User', {
   username: {
-    type: DataTypes.STRING, // Campo 'username' do tipo STRING
-    allowNull: false, // Não permite valores nulos
-    unique: true // Deve ser único (não pode haver dois usuários com o mesmo username)
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true
   },
   password: {
-    type: DataTypes.STRING, // Campo 'password' do tipo STRING
-    allowNull: false // Não permite valores nulos
+    type: DataTypes.STRING,
+    allowNull: false
   }
 });
 

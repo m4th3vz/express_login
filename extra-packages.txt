@@ -1,8 +1,0 @@
-bcryptjs é uma biblioteca JavaScript utilizada para criptografar senhas de forma segura, ideal para aplicações que exigem armazenamento seguro de credenciais de usuário.
-- npm install bcryptjs
-
-Este módulo gerencia sessões, permitindo que você mantenha os usuários logados após a autenticação inicial.
-- npm install express-session
-
-O Sequelize é um ORM (Object-Relational Mapping) para Node.js, que facilita a interação com bancos de dados relacionais utilizando JavaScript.
-- npm install sequelize
